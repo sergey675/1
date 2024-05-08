@@ -1,0 +1,39 @@
+﻿<Window x:Class="MetalFurnitureFactory.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Metal Furniture Factory" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Margin="10">
+            <TextBlock Text="Склад" FontWeight="Bold" Margin="0 0 0 10"/>
+            <StackPanel Orientation="Horizontal" Margin="0 0 5 0">
+                <TextBlock Text="Саморезы:" Width="100"/>
+                <TextBox x:Name="txtScrews" Width="50"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 0 5 0">
+                <TextBlock Text="Большая Дверь:" Width="100"/>
+                <TextBox x:Name="txtBigDoors" Width="50"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 0 5 0">
+                <TextBlock Text="Дверь тумбочки:" Width="100"/>
+                <TextBox x:Name="txtCabinetDoors" Width="50"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 0 5 0">
+                <TextBlock Text="Полка:" Width="100"/>
+                <TextBox x:Name="txtShelves" Width="50"/>
+            </StackPanel>
+            <Button Content="Обновить склад" Click="UpdateInventory_Click" Margin="0 10 0 0"/>
+            <Button Content="Не ограниченное кол-во ресурсов" Click="UseUnlimitedResources_Click"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Margin="10">
+            <TextBlock Text="Возможность производства" FontWeight="Bold" Margin="0 0 10 10"/>
+            <TextBlock x:Name="txtProductionResult"/>
+            <Button Content="Проверить возможность производства" Click="CheckProduction_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
